@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library - Sistem Peminjaman Buku</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf_viewer.min.css" rel="stylesheet">
+    <a href="laut_bercerita.pdf" target="_blank">
+    <script src="script.js"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-book-reader me-2"></i>E-Library
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#books">Katalog Buku</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#peminjaman">Peminjaman</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-primary ms-2" href="#" 
+                           data-bs-toggle="modal" data-bs-target="#loginModal">
+                           Masuk
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Selamat Datang di E-Library</h1>
+            <p class="lead">Temukan dan pinjam ribuan koleksi buku digital dengan mudah</p>
+            <div class="mt-4">
+                <button class="btn btn-light btn-lg me-2">Mulai Membaca</button>
+                <button class="btn btn-outline-light btn-lg">Pelajari Lebih Lanjut</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-lg" placeholder="Cari judul buku, pengarang, atau kategori...">
+                        <button class="btn btn-primary btn-lg" type="button">
+                            <i class="fas fa-search"></i> Cari
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Books -->
+    <section class="py-5" id="books">
+        <div class="container">
+            <h2 class="text-center mb-4">Buku Populer</h2>
+            <div class="row">
+                <!-- Book 1 -->
+                <div class="col-md-3">
+                    <a href="path/to/laut_bercerita.pdf" target="_blank" class="card text-decoration-none">
+                        <img src="lautbercerita.jpg" class="book-cover" alt="laut bercerita.pdf">
+                        <div class="card-body">
+                            <h5 class="card-title">Laut Bercerita</h5>
+                            <p class="card-text">Andrea Hirata</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-success">Tersedia</span>
+                                <button class="btn btn-primary btn-sm">Pinjam</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Book 2 -->
+                <div class="col-md-3">
+                    <a href="path/to/akupulangrenungkaniman.pdf" target="_blank" class="card text-decoration-none">
+                        <img src="yaallahakupulang.JPG" class="book-cover" alt="akupulangrenungkaniman.pdf">
+                        <div class="card-body">
+                            <h5 class="card-title">Ya Allah Aku Pulang</h5>
+                            <p class="card-text">febriawan jauhari</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-success">Tersedia</span>
+                                <button class="btn btn-primary btn-sm">Pinjam</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Book 3 -->
+                <div class="col-md-3">
+                    <a href="path/to/bersikapbodoamat.pdf" target="_blank" class="card text-decoration-none">
+                        <img src="bersikapbodoamat.JPG" class="book-cover" alt="bersikapbodoamat.pdf">
+                        <div class="card-body">
+                            <h5 class="card-title">Seni Bersikap </h5>
+                            <p class="card-text">mark manson</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-success">Tersedia</span>
+                                <button class="btn btn-primary btn-sm">Pinjam</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Book 4 -->
+                <div class="col-md-3">
+                    <a href="path/to/cantikituluka.pdf" target="_blank" class="card text-decoration-none">
+                        <img src="cantikituluka.jpg" class="book-cover" alt="cantikituluka.pdf">
+                        <div class="card-body">
+                            <h5 class="card-title">Cantik Itu Luka</h5>
+                            <p class="card-text">Eka Kurniawan</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-success">Tersedia</span>
+                                <button class="btn btn-primary btn-sm">Pinjam</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    </section>
+
+    <!-- How to Borrow -->
+    <section class="py-5 bg-light" id="peminjaman">
+        <div class="container">
+            <h2 class="text-center mb-5">Cara Peminjaman Buku</h2>
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-user-plus fa-3x text-primary"></i>
+                    </div>
+                    <h4>Daftar</h4>
+                    <p>Buat akun baru di sistem kami</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-search fa-3x text-primary"></i>
+                    </div>
+                    <h4>Cari Buku</h4>
+                    <p>Temukan buku yang ingin dipinjam</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-book fa-3x text-primary"></i>
+                    </div>
+                    <h4>Pinjam</h4>
+                    <p>Klik tombol pinjam pada buku</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-book-reader fa-3x text-primary"></i>
+                    </div>
+                    <h4>Baca</h4>
+                    <p>Nikmati buku digital Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Masuk ke Akun</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Masuk</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>E-Library</h5>
+                    <p>Sistem peminjaman buku digital modern untuk semua kalangan.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Link Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Beranda</a></li>
+                        <li><a href="#" class="text-white">Katalog</a></li>
+                        <li><a href="#" class="text-white">Cara Peminjaman</a></li>
+                        <li><a href="#" class="text-white">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hubungi Kami</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> info@e-library.com</li>
+                        <li><i class="fas fa-phone me-2"></i>+62 8310882793</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Banda Aceh, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 E-Library.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="pdfModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Baca Buku</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div id="pdfViewer" style="height: 80vh;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

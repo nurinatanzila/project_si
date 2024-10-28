@@ -1,0 +1,13 @@
+/* styles.css */
+
+/* Styling untuk modal login */
+.modal-content {
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Error message */
+#loginError {
+    font-size: 0.9rem;
+    text-align: center;
+}
